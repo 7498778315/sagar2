@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age calculator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+   body{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .container{
+        text-align: center;
+        width: 400px;
+        box-shadow: 2px 2px 5px blueviolet;
+        margin: 200px 0px;
+   }
+   .container h1{
+    font-size: 40px;
+    margin: 30px 0px;
+   }
+   .inputdiv{
+    margin: 40px 0px;
+    padding: 5px;
+    display: flex;
+    margin-left: 50px;
+   }
+   .inputdiv input{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: crimson;
+   }
+   .inputdiv button{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-color: crimson;
+   }
+   #para{
+    margin: 20px;
+    font-size: 20px;
+
+   }
+
+</style>
+<body>
+    <div class="container">
+        <h1>age calculator</h1>
+        <div class="inputdiv">
+            <input type="date" value="birthdate" id="inputdate">
+            <button onclick="calculateage()" id="age">calculate</button>
+        </div>
+        <p id="para"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(jym-images/tic\ tac\ toe2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.game{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+.box{
+    border: 2px solid;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(36, 36, 36);
+}
+.game-info{
+    margin: 0px 20px;
+}
+.game-info h1{
+    font-size: 40px;
+}
+.game-info p{
+    font-size: 20px;
+}
+.reset{
+    margin: 10px 20px;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+
+
+/* responsive */
+@media screen and (max-width:670px) {
+    .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .game-info{
+        margin: 50px 0px;
+    }
+}

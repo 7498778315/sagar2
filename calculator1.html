@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+
+    .container{
+        width: 350px;
+        margin: auto;
+        border: 2px solid red;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .calculator
+
+    .operator{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    .operator button{
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>CALCULATOR</h1>
+        <div class="calculator">
+            <input type="text" placeholder="00">
+            <div class="operator">
+                <button type="button" onclick="allclear()"id="ac">ac</button>    
+                <button type="button" onclick="clear()"id="cl">cl</button>    
+                <button type="button" onclick="txt.value +='.'">.</button>    
+                <button type="button" onclick="txt.value +='/'">/</button>
+                <button type="button" onclick="allclear()"id="ac">7</button>    
+                <button type="button" onclick="clear()"id="cl">8</button>    
+                <button type="button" onclick="txt.value +='.'">9</button>    
+                <button type="button" onclick="txt.value +='/'">+</button>    
+                <button type="button" onclick="allclear()"id="ac">4</button>    
+                <button type="button" onclick="clear()"id="cl">5</button>    
+                <button type="button" onclick="txt.value +='.'">6</button>    
+                <button type="button" onclick="txt.value +='/'">-</button>    
+                <button type="button" onclick="allclear()"id="ac">1</button>    
+                <button type="button" onclick="clear()"id="cl">2</button>    
+                <button type="button" onclick="txt.value +='.'">3</button>    
+                <button type="button" onclick="txt.value +='/'">*</button>  
+                <button type="button" onclick="allclear()"id="ac">00</button>    
+                <button type="button" onclick="clear()"id="cl">0</button>   
+                <button type="button" onclick="txt.value +='.'">%</button> 
+                <button type="button" onclick="txt.value +='.'">=</button>               
+             </div>
+        </div>
+    </div>
+    
+</body>
+</html>

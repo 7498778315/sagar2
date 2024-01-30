@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <!--navigation goes here-->
+    <div id="navigation">
+    <nav class="navbar">
+        <div class="left">
+            <h1>Logo</h1>
+        </div>
+        <div class="right">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkBtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="middle">
+         <button type="button" class="login" id="login">Login</button>
+         <i class="fa-solid fa-shop" onclick="document.getElementById('cart-container').style.display = 'block'"></i>
+         <span id="cart-amount">0</span>
+        </div>
+    </nav>
+    </div>
+
+
+    <div id="cart-container">
+        <h1> Shopping Cart</h1>
+        <span class="cart-close" onclick="document.getElementById('cart-container').style.display = 'none' ">&#10006</span>
+        <div class="cart-details">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpN4dOclbJzFsfCl4JiBWS2PIINzyb6iPJpQ&usqp=CAU">
+            <div class="cart-desc">
+                <h5 class="cart-name">Hoddies</h5>
+                <p class="cart-prise">$500</p>
+                <input type="number" id="cart-number" placeholder="1">
+            </div>
+            <i class="fa-solid fa-trash" id="cart-remove"></i>
+        </div>
+        <hr>
+        <div class="cart-total">
+            <h4>Subtotal</h4>
+            <Span id="cart-subtotal">$13843</Span>
+        </div>
+        <button class="cart-btn">Buy Now</button>
+    </div>
+<!--navigatiom end here-->
+
+<!-- main section goes here -->
+<section>
+    <div class="mainsection">
+        <div class="maintext">
+            <h1>
+            Codeswear
+            </h1>
+          <p>
+          CodesWear is an Online Shopping site for Geek Clothing. Shop from a wide range of Tshirts, Hoodies, Mugs, Sweatshirts, Caps and Mousepads at the best ...
+          </p>
+          <div class="mainicon">
+            <ul>
+            <li><a href="www.facebook.com"><i class="fa-brands fa-facebook"></a></i></li>
+            <li><a href="www.instagram.com"><i class="fa-brands fa-instagram"></a></i></li>
+            <li><a href="www.twitter.com"><i class="fa-brands fa-twitter"></a></i></li>
+            <li><a href="www.youtube.com"><i class="fa-brands fa-youtube"></a></i></li>
+          </ul>
+        </div>        
+        </div>
+        <div class="mainimg">
+            <img src="../images/codeswear1.jpg" alt="codeswaer" width="100%" height="100%">
+        </div>
+        </div>
+        
+</section>
+<!-- main section end here -->
+<!-- product section start here -->
+<div class="product-container">
+    <h2>Our Product</h2>
+    <div id="shop-container">
+    </div>
+</div>
+
+<!-----tesimonial---->
+<section>
+    <div class="testimonial">
+        <h1>Our Testimonial</h1>
+        <div class="testimonialabout">
+            <div class="testimonialrow">
+                <h5>Lorem, ipsum dolor.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="testimonialicon">
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                    </ul>
+                </div>
+                <div class="testimonialimg">
+                    <img src="/images/portfolio.jpg" alt="" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="testimonialrow">
+                <h5>Lorem, ipsum dolor.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="testimonialicon">
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                    </ul>
+                </div>
+                <div class="testimonialimg">
+                    <img src="/images/portfolio.jpg" alt="" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="testimonialrow">
+                <h5>Lorem, ipsum dolor.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="testimonialicon">
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                        <li><i class="fa-solid fa-star"></i> </li>
+                    </ul>
+                </div>
+                <div class="testimonialimg">
+                    <img src="/images/portfolio.jpg" alt="" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--testimonial end here-->
+
+<!--offer section start here-->
+<section>
+<div class="offer">
+    <div class="offerimg">
+        <img src="images/codeswear9.jpg" alt="offerimage">
+    </div>
+    <div class="offertext">
+        <div class="offerheading">
+            <h1>Up To 50% Discounts</h1>
+            <h5> price 500$</h5>
+        </div>
+        <div class="offericon">
+            <button type="button">buy now <i class="fa-solid fa-arrow-right"></i> </button>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+<button onclick="myFunction()" id="myBtn">Read more</button>
+    </div>
+</div>
+</section>
+
+<!--trending section goes here-->
+<section>
+    
+</section>
+
+
+
+<script src="script4.js"></script>
+</body>
+</html>

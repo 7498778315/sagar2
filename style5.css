@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5OET9DtpEm_0orH4VXWK9lIBffx1rDNQriA&usqp=CAU");
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    margin-top: 5px;
+    position: sticky;
+    top: 0;
+    margin-top: 20px;
+    z-index: 1000;
+}
+.navbar a{
+    font-size: 40px;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    text-shadow: 2px 2px 20px red
+}
+.right button{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.50s;
+    position: relative;
+}
+.right button i{
+    padding: 3px;
+}
+.lang-container{
+    position: absolute;
+    top: 70px;
+    border: 1px solid;
+    background-color: black;
+    width: 120px;
+    padding: 20px 0px;
+    display: none;
+}
+.lang-container ul li{
+    list-style-type: none;
+}
+.lang-container ul li a{
+    margin: 10px;
+    padding: 0px 0px;
+    color: white;
+}
+
+.right .sign-in{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    border: 2px solid white;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+}
+.header-content h1{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+    padding: 10px;
+}
+.header-content p{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.header-login{
+    text-align: center;
+    margin-top: 30px;
+}
+ .form input{
+    width: 50%;
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+.form input::placeholder{
+    color: white;
+}
+.form button{
+    padding: 8px;
+    font-size: 20px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    outline: none;
+}
+.form input:focus{
+    color: white;
+}
+.headerhr{
+    background-color: red;
+    margin: 0px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px red;
+}
+/* header responsive */
+@media screen and (max-width:650px) {
+    .navbar img{
+        width: 200px;
+    }
+    .right button{
+        padding: 3px; 
+        margin-right: 20px;   
+    }
+    .right a{
+        font-size:15px;
+    }
+    .header-content{
+        padding: 0px;
+    }
+    .header-content h1{
+        padding: 5px;
+        font-size: 30px;
+    }
+    .header-content p{
+        font-size: 15px;
+    }
+    .form input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form button{
+        padding: 5px;
+    }
+}
+
+/* sign-up form */
+#form-container{
+    width: 90%;
+    max-width: 350px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    z-index: 111;
+    border: 1px solid;
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    display: none;
+}
+#form-container .close{
+    position: absolute;
+    color: black;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px;
+    transition: all 0.80s;
+    padding: 0px 5px;
+}
+#form-container .close:hover{
+    background-color:rgb(221, 95, 49);
+    border-radius: 10px;
+}
+.modal-content{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.imgcontainer img{
+    margin-bottom: 30px;
+    border: 3px solid;
+    border-radius: 50%;
+}
+.inputcontainer input, .login{
+    width: 90%;
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+.eyepass{
+    position: relative;
+}
+#eyes{
+    position: absolute;
+    right:30px;
+    top: 30px;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.login{
+    background-color: rgb(221, 95, 49);
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    padding: 5px;
+}
+ .container{
+    position: relative;
+    margin: 0px;
+ }
+ .psw{
+    position: absolute;
+    right: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+ }
+.cancelbtn{
+    margin: 10px 0px;
+    width: 120px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: rgb(221, 95, 49);
+    color: white;
+}
+
+
+
+
+
+/* main section start here */
+.main{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.maintext h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.maintext p{
+    font-size: 20px;
+    padding: 10px;
+}
+.mainimg img{
+    width: 400px;
+}
+/* main responsive */
+@media screen and (max-width:730px) {
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .maintext p{
+        padding: 20px;
+    } 
+}
+/* faq section start here */
+
+.faq-container{
+    max-width: 60%;
+    margin: 50px auto;
+}
+.faq-container h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.faq{
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.faq.active .faq-answer{
+    height: fit-content;
+}
+/* .faq.active .faq-question i{
+    transform: rotate(180deg);
+} */
+
+.faq-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(59, 59, 59);
+    padding: 8px;
+}
+.faq-question h2{
+    font-size: 25px;
+}
+.faq-question i{
+    font-size: 25px
+}
+.faq-answer{
+    font-size: 20px;
+    overflow: hidden;
+    transition: all 1s;
+    height: 0;
+}
+.faq-answer p{
+    padding: 5px 0px;
+}
+/* responsive faq section */
+@media screen and (max-width:690px) {
+    .faq-container{
+        margin: 50px 0px;
+        max-width: 100%;
+    }
+    .faq-question h2{
+        font-size: 20px;
+    }
+    
+}
+
+/* footer start here */
+footer{
+    margin-top: 100px;
+    background-color: rgb(46, 46, 46);
+}
+.footer-row{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.footer-col a{
+    color: white;
+    padding: 8px 0px;
+}
+.footer-col button{
+    margin-top: 30px;
+    font-size: 18px;
+    padding: 8px;
+}
+/* footer responsive */
+@media screen and (max-width:730px) {
+    .footer-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px 20px;
+    }
+}

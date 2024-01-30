@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple calculator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/mp1.jpg);
+        background-position: center;
+        text-align: center;
+        position: relative;
+    }
+    .container h1{
+        color: white;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 40px;
+        text-shadow: 2px 2px 4px rgb(230, 13, 49);
+
+    }
+    .calculator{
+        width: 300px;
+        height: auto;
+        box-shadow: 2px 2px 2px rgb(230, 13, 49);
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .history{
+        margin: 10px;
+    }
+    .history input{
+        width: 100%;
+        height: 80px;
+        text-align: right;
+        border-radius: 10px;
+        font-size: 30px;
+        padding: 10px;
+        box-shadow: 2px 2px 2px rgb(230, 13, 49); 
+        border: none;
+        outline: none;
+    }
+    
+    .buttons button{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 50%;
+        font-size: 20px;
+        text-align: center;
+        box-shadow: 1px 1px 2px rgb(230, 13, 49) inset;
+    }
+    .buttons .equal{
+        width: 110px;
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+       <h1>CALCULATOR</h1>
+        <div class="calculator">
+            <div class="history">
+                <input type="text" placeholder="00" autocomplete="off" id="txt">
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="allclear()"id="ac">ac</button>    
+                <button type="button" onclick="clear()"id="cl">cl</button>    
+                <button type="button" onclick="txt.value +='.'">.</button>    
+                <button type="button" onclick="txt.value +='/'">/</button>    
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="txt.value +=7">7</button> 
+                <button type="button" onclick="txt.value +=8">8</button>
+                <button type="button" onclick="txt.value +=9">9</button>
+                <button type="button" onclick="txt.value +='*'">*</button>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="txt.value +=4">4</button>
+                <button type="button" onclick="txt.value +=5">5</button>
+                <button type="button" onclick="txt.value +=6">6</button>
+                <button type="button" onclick="txt.value +='-'">-</button>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="txt.value +=1">1</button>
+                <button type="button" onclick="txt.value +=2">2</button>
+                <button type="button" onclick="txt.value +=3">3</button>
+                <button type="button" onclick="txt.value +='+'">+</button>
+            </div>
+            <div class="buttons">
+                <button type="button"onclick="txt.value +='00'">00</button>
+                <button type="button"onclick="txt.value +=0">0</button>
+                <button type="button"onclick="calculate()" class="equal">=</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let txt=document.getElementById('txt');
+        let ac=document.getElements.getElementById("ac");
+        let cl=document.getElements.getElementById("cl");
+        let equal=document.getElementsByClassName("equal");
+        let seven = document.getElementById("seven");
+
+
+        function calculate(){
+            try{
+                txt.value= eval(txt.value);
+            }
+            catch{
+               alert("invalid"); 
+            }
+        }
+        
+        function allclear(){
+            txt.value="";
+        }
+        function clear(){
+            txt.value = txt.value.slice(0,-2);
+        }
+    
+    </script>
+</body>
+</html>

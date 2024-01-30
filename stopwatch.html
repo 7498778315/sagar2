@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+    }
+    body{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    .container{
+        margin: 60px auto;
+        text-align: center;
+    }
+    .container h1{
+        margin: 20px 0px;
+    }
+    .buttongrp button:nth-child(1){ 
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 10px;
+        background: linear-gradient(to right, blue,black);
+        color: white;
+        border: none;
+    }
+    .buttongrp button:nth-child(2){ 
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 10px;
+        background: linear-gradient(to right, green,black);
+        color: white;
+        border: none;
+    }
+    .buttongrp button:nth-child(3){ 
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 10px;
+        background: linear-gradient(to right,crimson,black);
+        color: white;
+        border: none;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h1 id="templete" >00:00:00</h1>
+        <div class="buttongrp">
+            <button type="button" id="stopbtn" onclick="stopbutton()">Stop </button>
+            <button type="button" id="startbtn" onclick="startbutton()">Start </button>
+            <button type="button" id="resetbtn" onclick="resetbutton()">Reset </button>
+        </div>
+    </div>
+    
+
+
+    <script>
+        let sec = 0;
+        let min = 0;
+        let hour = 0;
+        let timer = null;
+        let startbtn = document.getElementById("startbtn");
+        let stopbtn = document.getElementById("stopbtn");
+        let resetbtn = document.getElementById("resetbtn");
+        let h1 = document.getElementById("templete");
+        
+
+        function startbutton(){
+            if(timer != null){
+                clearInterval(timer);
+            }
+                timer = setInterval(watchstart,1000);
+                h1.innerHTML = "00:00:00";
+            }
+            
+
+           function stopbutton(){
+               clearInterval(timer);
+           }
+
+           function resetbutton(){
+            clearInterval(timer);
+            h1.innerHTML = "00:00:00";
+           }
+
+
+        function watchstart(){
+            sec++
+            if(sec == 60){
+                min++
+                sec = 0;
+            }
+            if(min == 60){
+                hour++
+            }
+             let hours = hour < 10 ? "0" + hour : hour;
+             let minute = min < 10 ? "0" + min : min;
+             let second = sec < 10 ? "0" + sec : sec;
+
+
+            h1.innerHTML =`${hours}:${minute}:${second}`
+        }
+
+
+    </script>
+</body>
+</html>

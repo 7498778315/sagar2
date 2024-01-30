@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: cursive;
+}
+header{
+    width: 100%;
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 2px 4px black;
+    margin: 4px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.left{
+    font-size: 25px;
+}
+.left h1{
+   cursor: pointer;
+   padding-bottom: 3px;
+}
+.left span{
+    color: chocolate;
+}
+.right{
+    position: relative;
+}
+.nav{
+    display: flex;
+}
+.nav li{
+    list-style-type: none;
+}
+.nav li a{
+    text-decoration: none;
+    font-size: 25px;
+    padding: 3px 8px;
+    color: black;
+    transition: all 1s;
+    margin: 0px 2px;
+    
+}
+.nav li a:nth-child(3),i{
+    font-size: 25px;
+    padding: 0px 5px;
+}
+.nav li a:nth-child(3):hover, .nextnav{
+    display: block;
+}  
+.nav li a:hover{
+    background-color: black;
+    color: chocolate;
+    border-radius: 3px;
+}
+.nextnav{
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    padding: 10px;
+    display: none;
+}
+.nextnav ul li a{
+    margin: 10px 0px;
+}
+.humberger i{
+    font-size: 25px;
+    padding: 6px;
+    transition: all 1s;
+    cursor: pointer;
+    display: none;
+
+}
+.humberger i:hover{
+    background-color: black;
+    color: chocolate;
+    border-radius: 3px;
+}
+/* header responsive */
+@media screen and (max-width:700px) {
+    .nav ul li a{
+        display: none;
+    }    
+}
+section{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px chocolate;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.maintext{
+    margin-right: 5px;
+    padding: 5px;
+}
+.maintext h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 3px;
+}
+.maintext span{
+    color: chocolate;
+}
+.maintext p{
+    font-size: 25px;
+}
+.maintext h2{
+    margin: 10px 0;
+    padding: 3px;
+    text-align: center;
+    font-size: 35px;
+}
+.maintext button{
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 43%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-transform: capitalize;
+}
+.maintext button:hover{
+    color: white;
+}
+.mainicon{
+    margin-top: 5px;
+}
+.mainicon ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.mainicon ul li{
+    list-style-type: none;
+}
+.mainicon ul li i{
+    font-size: 35px;
+    padding: 5px 10px;
+    transition: all 0.5s;
+}
+.mainicon ul li a:hover{
+    color: chocolate;
+}
+.mainimg{
+    padding: 5px;
+    margin: 0 10px;
+}
+.mainimg img{
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+.aboutsection{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    color: chocolate;
+}
+
+/* tab-contaoner dtrat here */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  /* Style the tab content */
+  .tabcontent {
+    padding: 6px 12px;
+    box-shadow: 0px 0px 10px ;
+    border-top: none;
+  }
+
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    margin: 10px 0;
+    padding: 4px;
+    box-shadow: 2px 2px 5px chocolate;
+    flex-wrap: wrap;
+
+}
+.aboutimg{
+    margin: auto;
+}
+.aboutimg img{
+    width: 300px;
+    height: 350px;
+    box-shadow: 2px 2px 5px chocolate;
+    padding: 5px; 
+    transition: all 1s;   
+}
+.aboutimg img:hover{
+    transform: scale(0.9,0.9);
+}
+.aboutimg h2{
+    color: chocolate;
+    text-align: center;
+    margin: 5px;
+}
+.aboutimg p{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.footersection{
+    background-color: black;
+    color: white;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footertext{
+    padding: 10px 20px;
+}
+.footertext h1{
+    text-align: center;
+    color: chocolate;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.footertext p{
+    text-align: center;
+    margin: 8px;
+}
+.contactform{
+    box-shadow: 2px 2px 5px chocolate;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+.contactform div{
+    font-size: 34px;
+    color: chocolate;
+    margin-bottom: 10px;
+}
+.contactform input{
+    width: 200px;
+    height: 35px;
+    margin: 5px 0;
+    padding: 2px;
+    font-size: 15px;
+}
+input.submit{
+    border-radius: 10px;
+    background-color: chocolate;
+    color: white;
+    font-size: 20px;
+}
+.footericon{
+    font-size: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 1s;
+}
+.footericon i:hover{
+    transform: scale(0.9,0.9);
+}

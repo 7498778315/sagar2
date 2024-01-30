@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&family=Kalam&family=Kalnia:wght@300&family=Kite+One&family=Lobster&family=Roboto+Slab:wght@200;300;400;500;600&family=Roboto:ital,wght@1,500&display=swap');
+ 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cambo', serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 0px 5px crimson;
+}
+.left img{
+    width: 80px;
+    border-radius: 50%;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 40px;
+}
+.left a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-family: 'Lobster', sans-serif;
+    color: black;
+    text-shadow: 2px 2px 5px crimson;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+#check{
+    display: none;
+}
+#checkbtn{
+    display: none;
+}
+.right ul{
+    display: flex;
+}
+.right ul li{
+    list-style: none;
+}
+.right ul li a{
+    text-decoration: none;
+    margin: 0px 8px;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    position: relative;
+}
+.right ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    width: 0px;
+    height: 3px;
+    transition: all 0.80s;
+}
+.right ul li a:hover::after{
+    width: 50px;
+    background-color: crimson;
+}
+/* responsive navbar */
+@media screen and (max-width:740px) {
+    .item{
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 6rem;
+        left: 100%;
+        row-gap: 30px;
+        transition: all 1s;
+        background-color: grey;
+        padding-top: 50px;
+    }
+   .right ul li a{
+        font-size: 30px;  
+        color: white;   
+    }
+
+    #check{
+        display: none;
+    }
+    #checkbtn{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    #check:checked~ul {
+        left: 0%;
+    }
+}
+/* section */
+section{
+    margin: 20px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://images.lifestyleasia.com/wp-content/uploads/sites/7/2021/01/07170924/Bastian-Worli-Interiors-293948-1024x683.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+   flex-direction: column; 
+   text-align: center;
+   margin-bottom: 100px;
+}
+.content a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 90px;
+    font-size: 80px;
+    font-family:'Lobster', sans-serif; 
+}
+.content h2{
+    margin-top: 40px;
+    color: white;
+    padding: 10px;
+}
+.content p{
+    color: white;
+    padding: 20px;
+}
+.content button{
+    padding: 9px;
+    font-size: 20px;
+    margin-top: 30px;
+    color: chocolate;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    transition: all 0.50s;
+}
+.content button i{
+    transition: all 0.50s;
+}
+.content button:hover{
+    border-radius: 8px;
+}
+.content button:hover i{
+    padding-left: 5px;
+}
+/* main */
+.main{
+    padding: 10px;
+    margin-top: 50px;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.main-text{
+    padding: 10px;
+    text-align: center;
+}
+.main-text h2{
+    padding: 10px;
+}
+.main-text p{
+    margin-bottom: 30px;
+}
+
+.main-img img{
+    width: 400px;
+    height: auto;
+
+}
+@media screen and (max-width:860px) {
+    .main-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .main-img img{
+        width:500px;
+        object-fit: cover;
+    }
+    
+}
+/* food */
+.food{
+    text-align: center;
+    font-size: 40px;
+    margin: 50px 0px;
+}
+.food a{
+    text-decoration: none;
+    color: black;
+}
+
+.food-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    overflow: hidden;
+}
+.food-menu{
+    padding: 8px;
+    margin: 0px auto;
+}
+.food-menu img{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+}
+.food-menu h3{
+    text-align: center;
+    padding: 8px;
+}
+@media screen and (max-width:1010px) {
+    .food-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: px;
+    overflow: hidden;
+}
+}
+@media screen and (max-width:680px) {
+    .food-container{
+    display: flex;
+    flex-direction: column;
+}
+.food-menu img{
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+
+}
+}
+/* slide-show */
+.slide-show{
+    max-width: 60%;
+    margin: 40px auto;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+.slides{
+    text-align: center;
+}
+.slides img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.slide-text{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+}
+.prev{
+    position: absolute;
+    top: 45%;
+    left: 30px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    padding: 0px 5px;
+}
+.next{
+    position: absolute;
+    right: 40px;
+    top: 45%;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    padding: 0px 5px;
+}
+.slide-caption{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    left: 20%;
+    right: 20%;
+    font-size: 10px;
+    text-align: center;
+}
+/* responsive slider */
+@media screen and (max-width:780px) {
+    .slide-show{
+        width: 90%;
+    }
+    .slide-caption{
+        font-size: 8px;
+    }   
+}
+/* cocktails section */
+.cocktail-desc{
+    text-align: center;
+    padding: 30px;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px crimson;
+}
+.cocktails{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+}
+.cocktail{
+    text-align: center;
+}
+.cocktail img{
+    width: 250px;
+    height: 250px;
+    transition: all 1s;
+}
+.cocktail img:hover{
+    transform: scale(0.9,0.9);
+}
+.cocktail-text h2{
+    margin: 10px 0px;
+    padding: 5px;
+    font-size: 20px;
+}
+.cocktail-text h3,.prise{
+    font-size: 15px;
+}
+.prise{
+    color: red;
+    font-weight: bold
+}
+@media screen and (max-width:1150px) {
+    .cocktails{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+    }
+    
+}
+@media screen and (max-width:810px) {
+    .cocktails{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+    
+}
+@media screen and (max-width:560px) {
+    .cocktails{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    
+}
